@@ -27,7 +27,7 @@ export default function Home() {
       {/* Centered content */}
       <div className="relative flex flex-col items-center justify-center h-screen text-center">
         {/* Title */}
-        <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
+        <h1 style={{padding: "1rem"}} className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
           {t.title}
         </h1>
 
