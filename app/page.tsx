@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen">
-      {/* Foto full screen */}
+      {/* Fullscreen background image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/cosenza.jpg"
@@ -20,31 +20,34 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        {/* Overlay scuro */}
+        {/* Dark overlay on top of the image */}
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* Contenuto centrale */}
+      {/* Centered content */}
       <div className="relative flex flex-col items-center justify-center h-screen text-center">
-        {/* Titolo */}
+        {/* Title */}
         <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
           {t.title}
         </h1>
 
-        {/* Badge posizione */}
+        {/* Location badge with link to Google Maps */}
         <a
           href="https://www.google.com/maps/place/Cosenza/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-white/20 text-white px-4 py-1 rounded-full text-sm font-medium mt-4 hover:bg-white/30 transition"
+          style={{
+            fontFamily: 'montserrat',
+          }}
         >
           <MapPin size={16} />
           <span>{t.location}</span>
         </a>
       </div>
 
-      {/* Barra inferiore */}
-      <div className="absolute bottom-4 w-full flex justify-between px-6 text-white text-sm font-light">
+      {/* Bottom bar with photo credit (left) and site credit (right) */}
+      <div style={{fontFamily: "montserrat"}} className="absolute bottom-4 w-full flex justify-between px-6 text-white text-sm font-light">
         <span>{t.photoCredit}</span>
         <a
           href="https://mattleuterio.dev"
@@ -56,7 +59,7 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Switch lingua con bandierine */}
+      {/* Language switcher with flags */}
       <div className="absolute top-6 right-6 flex gap-2">
         <div
           className={`w-6 h-3 rounded-xs overflow-hidden cursor-pointer ${lang === "it" ? "opacity-100" : "opacity-50"} hover:opacity-100 transition`}

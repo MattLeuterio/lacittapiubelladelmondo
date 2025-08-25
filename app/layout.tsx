@@ -1,7 +1,8 @@
 import "./globals.css";
-import { Playfair_Display } from "next/font/google";
+import { Montserrat, Kapakana } from "next/font/google";
 
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700"] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
+const kapakana = Kapakana({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: "La città più bella del mondo",
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body className={playfair.className}>{children}</body>
+      <body className={`${montserrat.className} ${kapakana.className}`}>{children}</body>
     </html>
   );
 }
